@@ -1,0 +1,24 @@
+<div class="modal-header">
+  <h4 class="modal-title text-white">{{titulo| uppercase}}</h4>
+  <i class="fas fa-times cursor text-white" (click)="cancela()">
+  </i>
+</div>
+
+<form (ngSubmit)="confirma()">
+  <div class="modal-body">
+      <div class="container">
+          <h6 class="card-subtitle mb-2 text-muted">{{corpo}}</h6>
+
+          <div class="modal-footer">
+              <button class="btn btn-secondary  text-white" type="submit" (click)="confirma()">
+                {{btnpositivo}}
+              </button>
+
+              <button class="btn btn-success text-white" type="submit" (click)="cancela()">
+               {{btnnegativo}}
+            </button>
+
+          </div>
+      </div>
+  </div>
+</form>
