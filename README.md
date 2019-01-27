@@ -45,3 +45,6 @@ caminho: import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
  link: https://www.npmjs.com/package/ngx-loading#installation
  install:npm install --salvar ngx-loading
  
+ ##MASK - máscara para o imput
+ link:https://www.npmjs.com/package/ngx-mask
+  install:npm install --save ngx-mask
