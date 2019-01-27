@@ -26,25 +26,26 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## Itens usados no projeto
 
 ## Bootstrap
  npm install --save @ng-bootstrap/ng-bootstrap
 
-##MODAL
+## MODAL
 import no main module o NgbModule
 caminho: import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
- ##ngx-toastr
+ ## ngx-toastr
  link:https://www.npmjs.com/package/ngx-toastr
  install: npm install ngx-toastr --save
 
  animations toast
  npm install @angular/animations --save
 
- ##Loading
+ ## Loading
  link: https://www.npmjs.com/package/ngx-loading#installation
  install:npm install --salvar ngx-loading
  
- ##MASK - máscara para o imput
+ ## MASK - Máscara para o imput
  link:https://www.npmjs.com/package/ngx-mask
   install:npm install --save ngx-mask
