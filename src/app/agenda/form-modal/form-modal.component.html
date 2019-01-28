@@ -1,3 +1,29 @@
-<p>
-  form-modal works!
-</p>
+<div class="modal-header bg-info">
+  <h4 class="modal-title text-white">Contato</h4>
+  <i class="fas fa-times cursor text-white" (click)="activeModal.dismiss('Cross click')">
+  </i>
+</div>
+
+<form [formGroup]="formContato">
+    <div class="modal-body ">
+      <div class="container">
+        <div class="form-group">
+          <div class="row mb-12">
+            <div class="col-6">
+              <label><span style="color: red">*</span> Nome</label>
+              <input placeholder="Nome" type="text" class="form-control" formControlName="nome" />
+            </div>
+            <div class="col-6">
+                <label><span style="color: red">*</span> Telefone</label>
+                <input placeholder="(99)999-9999" type="text" class="form-control" formControlName="telefone" mask='(00)0000-0000' />
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer ">
+      <button type="submit"  class="btn btn-success"(click)=submitForm()>
+        Salvar
+      </button>
+    </div>
+  </form>

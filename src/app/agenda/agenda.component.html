@@ -1,12 +1,33 @@
-
 <ngx-loading [show]="load.loading" [config]="{ fullScreenBackdrop : true }">
 </ngx-loading>
-<div class="row float-right">
-  <div class="col-12">
-    <button class="btn btn-primary btn-sm">
-      <i class="fas fa-edit"></i> Editar
-    </button>
-    <button class="btn btn-danger btn-sm">
-      <i class="fas fa-trash-alt"></i> Excluir
-    </button>
+
+<div class="container">
+  <h3 class="tituloPagina">Agenda de contatos</h3>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-sm-2">
+      <button class="btn btn-primary" type="button" (click)="openFormModal(undefined)">
+        <i class="fas fa-file"></i> Novo</button>
+    </div>
   </div>
+
+  <br>
+  <ul class="list-group list-group-flush">
+    <div class="row mb-3">
+      <div class="col-sm-6">Nome</div>
+      <div class="col-sm-3">Telefone</div>
+      <div class="col-sm-3">Editar / Excluir</div>
+    </div>
+
+    <li *ngFor="let contato of contatos" class="list-group-item">
+      <div class="row mb-3">
+        <div class="col-sm-6">{{contato.nome}}</div>
+        <div class="col-sm-3">{{contato.telefone | mask:'(00)0000-0000'}}</div>
+        <div class="col-sm-3"><a class="btn" (click)="openFormModal(contato)"><i class="bluecss fas fa-edit"></i></a>
+          <a class="btn" (click)="dialogAlert(contato)"><i class="redcss fas fa-trash-alt"></i></a></div>
+
+      </div>
+    </li>
+  </ul>
+</div>
